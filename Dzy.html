@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>SpaceX</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: consolas;
+		}
+		section{
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			overflow: hidden;
+			background-image: url(img/timg3.jpg);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		section h2{
+			font-size: 10em;
+			color: #333;
+		}
+		section span{
+			position: absolute;
+			bottom: -50px;
+			background: transparent;
+			border-radius: 50%;
+			pointer-events: none;
+			box-shadow: inset 0 0 10px rgba(255,255,255,0.5);
+			animation: animate 4s linear infinite;
+		}
+		section span:before
+		{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			transform: scale(0.25) translate(-70%, -70%);
+			background: radial-gradient(#fff,transparent);
+			border-radius: 50%;
+		}
+		@keyframes animate
+		{
+			0%
+			{
+				transform: translateY(0%);
+				opacity: 1;
+			}
+			99%
+			{
+				opacity: 1;
+			}
+			100%
+			{
+				transform: translateY(-1200%);
+				opacity: 0;
+			}
+		}
+		body{
+			 width: 100%;
+			height: 100%;
+		}
+		.box{
+            line-height: 40px;
+            text-align: center;
+            position: absolute;
+            right: 50px;
+            top: 200px;
+            height: 89px;
+            width: 19px;
+            border: #111;
+            font-size: 40px;
+            font-family: "fantasy";
+        }
+		.total{
+			height: 3900px;
+			background-image: url(img/SpaceX.png);
+			background-size: 100% 100%;
+		}
+		.title>ul>li{
+			display: inline-block;
+			padding-left:20px;
+			float: left;
+			text-align: center;			
+		}
+		.title>ul>li>a{
+			text-decoration: none;
+			color:white;
+		}
+		.title>ul>li>img{
+			padding-top: 10px;
+		}
+		.title{
+			width: 1300px;
+			height: 80px;
+			margin-left: 200px;
+		}
+		.wz{
+			padding-top: 30px;
+		}
+		.title>span>a{
+			text-decoration: none;
+			color:white;
+		}
+		.title>a{
+			text-decoration: none;
+			color:white;
+		}
+		input{
+			display: inline-block;
+			margin-top: 34px;
+			margin-left: 50px;
+			border:1px solid black;
+		}
+		.title>span>a{
+			margin-left: 10px;
+			font-size: 14px;
+		}
+		.title>ul>li>a:hover{
+			border-bottom: 1.5px solid white;
+		}
+		.title>span>a:hover{
+			border-bottom: 1.5px solid white;
+		}
+		.title>a:hover{
+			border-bottom: 1.5px solid white;
+		}
+		.title>a>img{
+			padding-right:15px;
+			margin-top: 15px;
+		}
+		.title2{
+			height: 835px;
+			position: relative;
+		}
+		.kuai{
+			color: white;
+		}
+		.cha>span>a{
+			text-decoration: none;
+			color:white;
+		}
+		.xing{
+			font-size: 70px;
+			padding-left: 800px; 
+			display: inline;
+			position: absolute;
+			top: 200px;
+		}
+		.tan{
+			font-size: 30px;
+			padding-left: 805px; 
+			display: inline;
+			position: absolute;
+			top: 170px;
+		}
+		.cha{
+			font-size: 17px;
+			left: 803px; 
+			display: inline;
+			position: absolute;
+			top: 310px;
+			border:2px solid white;
+			height: 40px;
+			width: 200px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 10px;
+			text-align: center;
+		}
+		.title3{
+			height: 915px;
+			position: relative;
+		}
+		.kuai1{
+			color: white;
+		}
+		.cha1>span>a{
+			text-decoration: none;
+			color:white;
+		}
+		.xing1{
+			font-size: 70px;
+			padding-left: 300px; 
+			display: inline;
+			position: absolute;
+			top: 200px;
+		}
+		.tan1{
+			font-size: 30px;
+			padding-left: 305px; 
+			display: inline;
+			position: absolute;
+			top: 170px;
+		}
+		.cha1{
+			font-size: 17px;
+			left: 303px; 
+			display: inline;
+			position: absolute;
+			top: 310px;
+			border:2px solid white;
+			height: 40px;
+			width: 200px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 10px;
+			text-align: center;
+		}
+		.title4{
+			height: 1050px;
+			position: relative;
+		}
+		.kuai2{
+			color: white;
+		}
+		.cha2>span>a{
+			text-decoration: none;
+			color:white;
+		}
+		.xing2{
+			font-size: 20px;
+			padding-left: 105px; 
+			display: inline;
+			position: absolute;
+			top: 457px;
+		}
+		.xin{
+			font-size: 20px;
+			padding-left: 105px; 
+			display: inline;
+			position: absolute;
+			top: 487px;
+		}
+		.xin1{
+			font-size: 20px;
+			padding-left: 105px; 
+			display: inline;
+			position: absolute;
+			top: 517px;
+		}
+		.tan2{
+			font-size: 50px;
+			padding-left: 100px; 
+			display: inline;
+			position: absolute;
+			top: 370px;
+		}
+		.cha2{
+			font-size: 17px;
+			left: 103px; 
+			display: inline;
+			position: absolute;
+			top: 570px;
+			border:2px solid white;
+			height: 40px;
+			width: 200px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 10px;
+			text-align: center;
+		}
+		.title5{
+			height: 1050px;
+			position: relative;
+		}
+		.kuai3{
+			color: white;
+		}
+		.cha3>span>a{
+			text-decoration: none;
+			color:white;
+		}
+		.xing3{
+			font-size: 20px;
+			padding-left: 105px; 
+			display: inline;
+			position: absolute;
+			top: 257px;
+		}
+		.xin2{
+			font-size: 20px;
+			padding-left: 105px; 
+			display: inline;
+			position: absolute;
+			top: 287px;
+		}
+		.xin3{
+			font-size: 20px;
+			padding-left: 105px; 
+			display: inline;
+			position: absolute;
+			top: 337px;
+		}
+		.xin4{
+			font-size: 20px;
+			padding-left: 105px; 
+			display: inline;
+			position: absolute;
+			top: 367px;
+		}
+		.xin5{
+			font-size: 20px;
+			padding-left: 105px; 
+			display: inline;
+			position: absolute;
+			top: 417px;
+		}
+		.xin6{
+			font-size: 20px;
+			padding-left: 105px; 
+			display: inline;
+			position: absolute;
+			top: 447px;
+		}
+		.xin7{
+			font-size: 20px;
+			padding-left: 105px; 
+			display: inline;
+			position: absolute;
+			top: 497px;
+		}
+		.xin8{
+			font-size: 20px;
+			padding-left: 105px; 
+			display: inline;
+			position: absolute;
+			top: 527px;
+		}
+		.xin9{
+			font-size: 20px;
+			padding-left: 105px; 
+			display: inline;
+			position: absolute;
+			top: 567px;
+		}
+		.xin10{
+			font-size: 20px;
+			padding-left: 105px; 
+			display: inline;
+			position: absolute;
+			top: 597px;
+		}
+		.xin11{
+			font-size: 20px;
+			padding-left: 105px; 
+			display: inline;
+			position: absolute;
+			top: 637px;
+		}
+		.tan3{
+			font-size: 50px;
+			padding-left: 100px; 
+			display: inline;
+			position: absolute;
+			top: 170px;
+		}
+		.cha3{
+			font-size: 17px;
+			left: 103px; 
+			display: inline;
+			position: absolute;
+			top: 750px;
+			border:2px solid white;
+			height: 40px;
+			width: 200px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 10px;
+			text-align: center;
+		}
+		.dibu>ul>li{
+			display: inline-block;
+			float: left;
+		}
+		.dibu{
+			height: 100px;
+		}
+		.dibu>ul>li>a{
+			text-decoration: none;
+			color:white;
+		}
+		.dibu>ul>li{
+			padding: 20px;
+		}
+		.dibu>ul{
+			padding-left:250px;
+		}
+		.dibu>ul>li>span{
+			color:gray;
+			font-size: 15px;
+		}
+		.box>a{
+			text-decoration: none;
+			font-family: "fantasy";
+        	color: rgb(255,235,205);
+		}
+		.time {
+  			display: flex;
+  			align-items: center;
+  			position: absolute;
+  			top: 2950px;
+  			left: 60px;
+		}
+		.time div {
+			width: 50px;
+			height: 50px;
+			background: -webkit-gradient(linear, left top, right top, from(black), to(black));
+			background: linear-gradient(to right bottom, black, black);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-left: 10px;
+			color: #fff;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"><a href="" class="num">加入我们·一起追梦</a></div>
+	<div class="total">
+		<div class="title">
+			<ul class="title1">
+				<li><img src="img/logo.png"></li>
+				<li class="wz"><a href="">猎鹰-Ⅸ</a></li>
+				<li class="wz"><a href="">猎鹰-重型</a></li>
+				<li class="wz"><a href="">龍舟</a></li>
+				<li class="wz"><a href="">星际飞船</a></li>
+				<li class="wz"><a href="">载人航天</a></li>
+				<li class="wz"><a href="">探索未知</a></li>
+			</ul>
+			<input type="text" placeholder="What do u want to know?" name="" id="" value="" />
+			<a href="">搜索</a>
+			<span><a href="">会员中心</a></span>
+		</div>
+		<div class="title2">
+			<div class="kuai">
+				<p class="xing">星际移民</p>
+				<p class="tan">无人深空</p>
+			</div>
+			<div class="cha"><span><a href="">加入我们</a></span></div>
+		</div>
+		<div class="title3">
+			<div class="kuai1">
+				<p class="xing1">载人航天返航</p>
+				<p class="tan1">重回怀抱</p>
+			</div>
+			<div class="cha1"><span><a href="">发现更多</a></span></div>
+		</div>
+		<div class="title4">
+			<div class="kuai2">
+				<p class="xing2">全面采用液压和电动系统，并已经基本完成电动系统。</p>
+				<p class="xin">电动系统为飞行人员模拟培训过程提供了高保真度。</p>
+				<p class="xin1">电动系统已成为飞行训练机的首选。</p>
+				<p class="tan2">SpaceX首创飞行模拟器</p>
+			</div>
+			<div class="cha2"><span><a href="">即刻询价</a></span></div>
+		</div>
+		<div class="time">
+			<div id="webeng" style="width: 320px;"></div>
+			<div id="day"></div>
+			<div id="hour"></div>
+			<div id="minute"></div>
+			<div id="second"></div>
+		</div>
+		<div class="title5">
+			<div class="kuai3">
+				<p class="xing3">20/06/13</p>
+				<p class="xin2">猎鹰9号运载火箭已成功发射58颗Starlink卫星和3颗Planet公司的Skysat高频成像对地观测小卫星星座，火箭现已成功返回无人驾驶着陆船。</p>
+				<p class="xin3">20/06/11</p>
+				<p class="xin4">NASA官员表示他们正计划让5月底飞往国际空间站的宇航员在今年夏天乘坐SpaceX载人龙飞船返回地球。</p>
+				<p class="xin5">20/05/27</p>
+				<p class="xin6">实现载人首飞,此次载人飞行任务名为“Demo-2”并顺利完成。</p>
+				<p class="xin7">20/04/27</p>
+				<p class="xin8">正在为NASA认证的首次载人龙飞船飞行任务（Crew-1）做准备，该任务预计于今年晚些时候执行，目前已进行发动机静态点火测试。</p>
+				<p class="xin10">20/04/22</p>
+				<p class="xin11">在纳维拉尔角肯尼迪航天中心再次成功发射“星链”低轨宽带星座的60颗卫星</p>
+				<p class="tan3">最新消息</p>
+			</div>
+			<div class="cha3"><span><a href="">了解更多</a></span></div>
+		</div>
+	</div>
+	<section>
+		<h2>Join us</h2>	
+	</section>
+	<div class="dibu" style="background-color: black;">
+		<ul>
+			<li><span>SPACEX©2020</span></li>
+			<li><a href="">TWITTER</a></li>
+			<li><a href="">YOUTUBE</a></li>
+			<li><a href="">INSTAGRAM</a></li>
+			<li><a href="">FLICKR</a></li>
+			<li><a href="">LINKEDIN</a></li>
+			<li><a href="">PRIVACY POLICY</a></li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		onload = function(){
+            var obox = document.querySelector(".box");
+            var oboxT = 200;
+            onscroll = function(){
+                var scrollT = document.documentElement.scrollTop;
+                obox.style.top = oboxT + scrollT + "px";
+            }
+        }
+        var s = 8640532 // 总秒数
+    	var m = 60 // 分秒数
+    	var h = 60 * 60 // 时秒数
+    	var d = 60 * 60 * 24 // 天秒数
+    	setInterval(function () {
+        s--;
+        var ld = parseInt(s / d) // 总天数
+        var lh = parseInt(s % d / h) // 不足一天的小时数
+        lh < 10 ? lh = '0' + lh : ''
+        var lm = parseInt(s % h / m) // 不足一小时的分钟数
+        lm < 10 ? lm = '0' + lm : ''
+        var ls = parseInt(s % m) // 不足一分的秒数
+        ls < 10 ? ls = '0' + ls : ''
+        document.getElementById("webeng").innerHTML = "距离探索者号载人航空器回收倒计时:";
+        document.getElementById('day').innerHTML = ld + '天'
+        document.getElementById('hour').innerHTML = lh + '时'
+        document.getElementById('minute').innerHTML = lm + '分'
+        document.getElementById('second').innerHTML = ls + '秒'
+    }, 1000)
+		function createBubble(){
+			const section = document.querySelector("section");
+			const createElement = document.createElement("span");
+			var size = Math.random() * 60;
+
+			createElement.style.width = 20 + size + 'px';
+			createElement.style.height = 20 + size + 'px';
+			createElement.style.left = Math.random() * innerWidth + "px";
+			section.appendChild(createElement);
+            setTimeout(() => {
+            	createElement.remove()
+            },4000)
+		}
+		setInterval(createBubble,50);
+	</script>
+</body>
+</html>
